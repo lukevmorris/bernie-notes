@@ -1,0 +1,17 @@
+<h1>Calls by day</h1>
+
+<% @days.each do |day| %>
+  <h2>
+    <span><%= day.date %>:</span>
+    <span class="total-callers"><%= day.callers %> total participants</span>
+  </h2>
+  <table class="call-list">
+    <% day.calls.each do |call| %>
+      <tr class="call">
+        <td class="time"><%= call.time %></td>
+        <td class="name"><%= call.name %></td>
+        <td class="callers"><%= call.callers %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
