@@ -1,6 +1,3 @@
-require 'sqlite3'
-require 'sequel'
-
 DB = Sequel.sqlite
 
 DB.create_table :conferences do

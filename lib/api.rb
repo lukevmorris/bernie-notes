@@ -1,5 +1,3 @@
-require 'http'
-
 module MC
   class Call
     def self.find(conf_uid, uid)

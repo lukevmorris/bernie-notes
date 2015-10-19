@@ -1,0 +1,5 @@
+gem 'sinatra'
+gem 'dotenv'
+gem 'sqlite3'
+gem 'sequel'
+gem 'http'
