@@ -2,10 +2,11 @@ class Call < Sequel::Model
   many_to_one :conference, key: :conf_uid
   one_to_many :participants, key: :call_uid
 
-  def self.build(raw)
-    self.new do |call|
+  def self.build(conference, raw)
+    self.create do |call|
       call.uid = raw["call"]["UID"]
       call.start = raw["call"]["actualStartTime"]
+      call.conference = conference
     end
   end
 
